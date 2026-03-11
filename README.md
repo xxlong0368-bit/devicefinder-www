@@ -23,4 +23,3 @@ Run `npm run dev` to start the development server.
 备注：
 - 工作流会自动设置 `VITE_BASE_PATH=/<仓库名>/`，用于正确处理静态资源路径。
 - 工作流会复制 `build/index.html` 到 `build/404.html`，用于 SPA 路由刷新回退。
-good
