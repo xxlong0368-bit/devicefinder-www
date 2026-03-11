@@ -21,5 +21,6 @@ Run `npm run dev` to start the development server.
 4. 访问地址：`https://<你的用户名>.github.io/<仓库名>/`
 
 备注：
-- 工作流会自动设置 `VITE_BASE_PATH=/<仓库名>/`，用于正确处理静态资源路径。
+- 当前仓库使用了自定义域名 `device.podslink.net`，工作流会设置 `VITE_BASE_PATH=/`。
+- 自定义域名写在 `public/CNAME`，构建时会自动带到发布产物里。
 - 工作流会复制 `build/index.html` 到 `build/404.html`，用于 SPA 路由刷新回退。
