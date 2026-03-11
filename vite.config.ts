@@ -3,7 +3,10 @@
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
+  const basePath = process.env.VITE_BASE_PATH ?? '/';
+
   export default defineConfig({
+    base: basePath,
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

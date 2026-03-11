@@ -2,6 +2,11 @@ import { createBrowserRouter } from "react-router";
 import { WebsiteView } from "./components/WebsiteView";
 import { SupportView } from "./components/SupportView";
 
+const basename =
+  import.meta.env.BASE_URL === "/"
+    ? "/"
+    : import.meta.env.BASE_URL.replace(/\/$/, "");
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -11,4 +16,6 @@ export const router = createBrowserRouter([
     path: "/support",
     Component: SupportView,
   },
-]);
+], {
+  basename,
+});
